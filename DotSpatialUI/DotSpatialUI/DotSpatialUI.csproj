@@ -1,0 +1,337 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1D4742EA-339D-45B7-9CA5-32632889461C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DotSpatialUI</RootNamespace>
+    <AssemblyName>DotSpatialUI</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DotSpatial.Analysis">
+      <HintPath>..\..\..\..\..\..\..\Users\Kaymara\Downloads\DotSpatial_Full.1.7\DotSpatial.Analysis.dll</HintPath>
+    </Reference>
+    <Reference Include="DotSpatial.Compatibility">
+      <HintPath>..\..\..\..\..\..\..\Users\Kaymara\Downloads\DotSpatial_Full.1.7\DotSpatial.Compatibility.dll</HintPath>
+    </Reference>
+    <Reference Include="DotSpatial.Controls">
+      <HintPath>..\..\..\..\..\..\..\Users\Kaymara\Downloads\DotSpatial_Full.1.7\DotSpatial.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="DotSpatial.Data">
+      <HintPath>..\..\..\..\..\..\..\Users\Kaymara\Downloads\DotSpatial_Full.1.7\DotSpatial.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="DotSpatial.Data.Forms">
+      <HintPath>..\..\..\..\..\..\..\Users\Kaymara\Downloads\DotSpatial_Full.1.7\DotSpatial.Data.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="DotSpatial.Extensions">
+      <HintPath>..\..\..\..\..\..\..\Users\Kaymara\Downloads\DotSpatial_Full.1.7\DotSpatial.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="DotSpatial.Modeling.Forms">
+      <HintPath>..\..\..\..\..\..\..\Users\Kaymara\Downloads\DotSpatial_Full.1.7\DotSpatial.Modeling.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="DotSpatial.Mono">
+      <HintPath>..\..\..\..\..\..\..\Users\Kaymara\Downloads\DotSpatial_Full.1.7\DotSpatial.Mono.dll</HintPath>
+    </Reference>
+    <Reference Include="DotSpatial.Positioning">
+      <HintPath>..\..\..\..\..\..\..\Users\Kaymara\Downloads\DotSpatial_Full.1.7\DotSpatial.Positioning.dll</HintPath>
+    </Reference>
+    <Reference Include="DotSpatial.Positioning.Design">
+      <HintPath>..\..\..\..\..\..\..\Users\Kaymara\Downloads\DotSpatial_Full.1.7\DotSpatial.Positioning.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="DotSpatial.Positioning.Forms">
+      <HintPath>..\..\..\..\..\..\..\Users\Kaymara\Downloads\DotSpatial_Full.1.7\DotSpatial.Positioning.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="DotSpatial.Projections">
+      <HintPath>..\..\..\..\..\..\..\Users\Kaymara\Downloads\DotSpatial_Full.1.7\DotSpatial.Projections.dll</HintPath>
+    </Reference>
+    <Reference Include="DotSpatial.Projections.Forms">
+      <HintPath>..\..\..\..\..\..\..\Users\Kaymara\Downloads\DotSpatial_Full.1.7\DotSpatial.Projections.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="DotSpatial.Serialization">
+      <HintPath>..\..\..\..\..\..\..\Users\Kaymara\Downloads\DotSpatial_Full.1.7\DotSpatial.Serialization.dll</HintPath>
+    </Reference>
+    <Reference Include="DotSpatial.Symbology">
+      <HintPath>..\..\..\..\..\..\..\Users\Kaymara\Downloads\DotSpatial_Full.1.7\DotSpatial.Symbology.dll</HintPath>
+    </Reference>
+    <Reference Include="DotSpatial.Symbology.Forms">
+      <HintPath>..\..\..\..\..\..\..\Users\Kaymara\Downloads\DotSpatial_Full.1.7\DotSpatial.Symbology.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="DotSpatial.Topology">
+      <HintPath>..\..\..\..\..\..\..\Users\Kaymara\Downloads\DotSpatial_Full.1.7\DotSpatial.Topology.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.ComponentModel.Composition.Registration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="ZedGraph, Version=1.0.1812.29779, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\ZedGraph.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GraphicsForms.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GraphicsForms.Designer.cs">
+      <DependentUpon>GraphicsForms.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PathPoint.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GraphicsForms.resx">
+      <DependentUpon>GraphicsForms.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Content Include="bin\Debug\Windows Extensions\DotSpatial.Data.Rasters.GdalExtension\gdal\data\compdcs.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="bin\Debug\Windows Extensions\DotSpatial.Data.Rasters.GdalExtension\gdal\data\coordinate_axis.csv" />
+    <None Include="bin\Debug\Windows Extensions\DotSpatial.Data.Rasters.GdalExtension\gdal\data\cubewerx_extra.wkt" />
+    <None Include="bin\Debug\Windows Extensions\DotSpatial.Data.Rasters.GdalExtension\gdal\data\datum_shift.csv" />
+    <None Include="bin\Debug\Windows Extensions\DotSpatial.Data.Rasters.GdalExtension\gdal\data\ecw_cs.wkt" />
+    <None Include="bin\Debug\Windows Extensions\DotSpatial.Data.Rasters.GdalExtension\gdal\data\ellipsoid.csv" />
+    <None Include="bin\Debug\Windows Extensions\DotSpatial.Data.Rasters.GdalExtension\gdal\data\epsg.wkt" />
+    <None Include="bin\Debug\Windows Extensions\DotSpatial.Data.Rasters.GdalExtension\gdal\data\esri_extra.wkt" />
+    <None Include="bin\Debug\Windows Extensions\DotSpatial.Data.Rasters.GdalExtension\gdal\data\esri_StatePlane_extra.wkt" />
+    <None Include="bin\Debug\Windows Extensions\DotSpatial.Data.Rasters.GdalExtension\gdal\data\esri_Wisconsin_extra.wkt" />
+    <None Include="bin\Debug\Windows Extensions\DotSpatial.Data.Rasters.GdalExtension\gdal\data\gcs.csv" />
+    <None Include="bin\Debug\Windows Extensions\DotSpatial.Data.Rasters.GdalExtension\gdal\data\gcs.override.csv" />
+    <None Include="bin\Debug\Windows Extensions\DotSpatial.Data.Rasters.GdalExtension\gdal\data\gdal_datum.csv" />
+    <None Include="bin\Debug\Windows Extensions\DotSpatial.Data.Rasters.GdalExtension\gdal\data\geoccs.csv" />
+    <None Include="bin\Debug\Windows Extensions\DotSpatial.Data.Rasters.GdalExtension\gdal\data\gt_datum.csv" />
+    <None Include="bin\Debug\Windows Extensions\DotSpatial.Data.Rasters.GdalExtension\gdal\data\gt_ellips.csv" />
+    <None Include="bin\Debug\Windows Extensions\DotSpatial.Data.Rasters.GdalExtension\gdal\data\header.dxf" />
+    <None Include="bin\Debug\Windows Extensions\DotSpatial.Data.Rasters.GdalExtension\gdal\data\nitf_spec.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bin\Debug\Windows Extensions\DotSpatial.Data.Rasters.GdalExtension\gdal\data\pcs.csv" />
+    <None Include="bin\Debug\Windows Extensions\DotSpatial.Data.Rasters.GdalExtension\gdal\data\pcs.override.csv" />
+    <None Include="bin\Debug\Windows Extensions\DotSpatial.Data.Rasters.GdalExtension\gdal\data\prime_meridian.csv" />
+    <None Include="bin\Debug\Windows Extensions\DotSpatial.Data.Rasters.GdalExtension\gdal\data\projop_wparm.csv" />
+    <None Include="bin\Debug\Windows Extensions\DotSpatial.Data.Rasters.GdalExtension\gdal\data\s57agencies.csv" />
+    <None Include="bin\Debug\Windows Extensions\DotSpatial.Data.Rasters.GdalExtension\gdal\data\s57attributes.csv" />
+    <None Include="bin\Debug\Windows Extensions\DotSpatial.Data.Rasters.GdalExtension\gdal\data\s57attributes_aml.csv" />
+    <None Include="bin\Debug\Windows Extensions\DotSpatial.Data.Rasters.GdalExtension\gdal\data\s57attributes_iw.csv" />
+    <None Include="bin\Debug\Windows Extensions\DotSpatial.Data.Rasters.GdalExtension\gdal\data\s57expectedinput.csv" />
+    <None Include="bin\Debug\Windows Extensions\DotSpatial.Data.Rasters.GdalExtension\gdal\data\s57objectclasses.csv" />
+    <None Include="bin\Debug\Windows Extensions\DotSpatial.Data.Rasters.GdalExtension\gdal\data\s57objectclasses_aml.csv" />
+    <None Include="bin\Debug\Windows Extensions\DotSpatial.Data.Rasters.GdalExtension\gdal\data\s57objectclasses_iw.csv" />
+    <None Include="bin\Debug\Windows Extensions\DotSpatial.Data.Rasters.GdalExtension\gdal\data\seed_2d.dgn" />
+    <None Include="bin\Debug\Windows Extensions\DotSpatial.Data.Rasters.GdalExtension\gdal\data\seed_3d.dgn" />
+    <None Include="bin\Debug\Windows Extensions\DotSpatial.Data.Rasters.GdalExtension\gdal\data\stateplane.csv" />
+    <None Include="bin\Debug\Windows Extensions\DotSpatial.Data.Rasters.GdalExtension\gdal\data\trailer.dxf" />
+    <None Include="bin\Debug\Windows Extensions\DotSpatial.Data.Rasters.GdalExtension\gdal\data\unit_of_measure.csv" />
+    <None Include="bin\Debug\Windows Extensions\DotSpatial.Data.Rasters.GdalExtension\gdal\data\vertcs.csv" />
+    <None Include="bin\Debug\Windows Extensions\DotSpatial.Data.Rasters.GdalExtension\gdal\data\vertcs.override.csv" />
+    <None Include="bin\Debug\Windows Extensions\DotSpatial.Data.Rasters.GdalExtension\gdal\share\esri.extra" />
+    <None Include="bin\Debug\Windows Extensions\DotSpatial.Data.Rasters.GdalExtension\gdal\share\ntf_r93.gsb" />
+    <None Include="bin\Debug\Windows Extensions\DotSpatial.Data.Rasters.GdalExtension\gdal\share\ntv1_can.dat" />
+    <None Include="bin\Debug\Windows Extensions\DotSpatial.Data.Rasters.GdalExtension\gdal\share\nzgd2kgrid0005.gsb" />
+    <None Include="bin\Debug\Windows Extensions\DotSpatial.Data.Rasters.GdalExtension\gdal\share\other.extra" />
+    <None Include="bin\Debug\Windows Extensions\DotSpatial.Data.Rasters.GdalExtension\gdal\share\proj_def.dat" />
+    <None Include="bin\Debug\Windows Extensions\DotSpatial.Plugins.Taudem.Port\awd.cfg" />
+    <None Include="bin\Debug\Windows Extensions\DotSpatial.Plugins.WebMap\DotSpatial.Plugins.WebMap.dll.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\Windows Extensions\DotSpatial.Data.Rasters.GdalExtension\DotSpatial.Data.Rasters.GdalExtension.dll" />
+    <Content Include="bin\Debug\Windows Extensions\DotSpatial.Data.Rasters.GdalExtension\DotSpatial.Data.Rasters.GdalExtension.pdb" />
+    <Content Include="bin\Debug\Windows Extensions\DotSpatial.Data.Rasters.GdalExtension\gdalconst_csharp.dll" />
+    <Content Include="bin\Debug\Windows Extensions\DotSpatial.Data.Rasters.GdalExtension\gdal\data\gdalicon.png" />
+    <Content Include="bin\Debug\Windows Extensions\DotSpatial.Data.Rasters.GdalExtension\gdal\data\GDALLogoBW.svg" />
+    <Content Include="bin\Debug\Windows Extensions\DotSpatial.Data.Rasters.GdalExtension\gdal\data\GDALLogoColor.svg" />
+    <Content Include="bin\Debug\Windows Extensions\DotSpatial.Data.Rasters.GdalExtension\gdal\data\GDALLogoGS.svg" />
+    <Content Include="bin\Debug\Windows Extensions\DotSpatial.Data.Rasters.GdalExtension\gdal\data\nitf_spec.xml" />
+    <Content Include="bin\Debug\Windows Extensions\DotSpatial.Data.Rasters.GdalExtension\gdal\data\pci_datum.txt" />
+    <Content Include="bin\Debug\Windows Extensions\DotSpatial.Data.Rasters.GdalExtension\gdal\data\pci_ellips.txt" />
+    <Content Include="bin\Debug\Windows Extensions\DotSpatial.Data.Rasters.GdalExtension\gdal\share\nad.lst" />
+    <Content Include="bin\Debug\Windows Extensions\DotSpatial.Data.Rasters.GdalExtension\gdal\x64\freexl.dll" />
+    <Content Include="bin\Debug\Windows Extensions\DotSpatial.Data.Rasters.GdalExtension\gdal\x64\gdal19.dll" />
+    <Content Include="bin\Debug\Windows Extensions\DotSpatial.Data.Rasters.GdalExtension\gdal\x64\gdalconst_wrap.dll" />
+    <Content Include="bin\Debug\Windows Extensions\DotSpatial.Data.Rasters.GdalExtension\gdal\x64\gdal_wrap.dll" />
+    <Content Include="bin\Debug\Windows Extensions\DotSpatial.Data.Rasters.GdalExtension\gdal\x64\geos_c.dll" />
+    <Content Include="bin\Debug\Windows Extensions\DotSpatial.Data.Rasters.GdalExtension\gdal\x64\iconv.dll" />
+    <Content Include="bin\Debug\Windows Extensions\DotSpatial.Data.Rasters.GdalExtension\gdal\x64\libcurl.dll" />
+    <Content Include="bin\Debug\Windows Extensions\DotSpatial.Data.Rasters.GdalExtension\gdal\x64\libeay32.dll" />
+    <Content Include="bin\Debug\Windows Extensions\DotSpatial.Data.Rasters.GdalExtension\gdal\x64\libexpat.dll" />
+    <Content Include="bin\Debug\Windows Extensions\DotSpatial.Data.Rasters.GdalExtension\gdal\x64\libmysql.dll" />
+    <Content Include="bin\Debug\Windows Extensions\DotSpatial.Data.Rasters.GdalExtension\gdal\x64\libpq.dll" />
+    <Content Include="bin\Debug\Windows Extensions\DotSpatial.Data.Rasters.GdalExtension\gdal\x64\msvcp100.dll" />
+    <Content Include="bin\Debug\Windows Extensions\DotSpatial.Data.Rasters.GdalExtension\gdal\x64\msvcr100.dll" />
+    <Content Include="bin\Debug\Windows Extensions\DotSpatial.Data.Rasters.GdalExtension\gdal\x64\ogr_wrap.dll" />
+    <Content Include="bin\Debug\Windows Extensions\DotSpatial.Data.Rasters.GdalExtension\gdal\x64\openjpeg.dll" />
+    <Content Include="bin\Debug\Windows Extensions\DotSpatial.Data.Rasters.GdalExtension\gdal\x64\osr_wrap.dll" />
+    <Content Include="bin\Debug\Windows Extensions\DotSpatial.Data.Rasters.GdalExtension\gdal\x64\plugins\cfitsio.dll" />
+    <Content Include="bin\Debug\Windows Extensions\DotSpatial.Data.Rasters.GdalExtension\gdal\x64\plugins\gdal_BAG.dll" />
+    <Content Include="bin\Debug\Windows Extensions\DotSpatial.Data.Rasters.GdalExtension\gdal\x64\plugins\gdal_ECW_JP2ECW.dll" />
+    <Content Include="bin\Debug\Windows Extensions\DotSpatial.Data.Rasters.GdalExtension\gdal\x64\plugins\gdal_FITS.dll" />
+    <Content Include="bin\Debug\Windows Extensions\DotSpatial.Data.Rasters.GdalExtension\gdal\x64\plugins\gdal_GMT.dll" />
+    <Content Include="bin\Debug\Windows Extensions\DotSpatial.Data.Rasters.GdalExtension\gdal\x64\plugins\gdal_HDF5.dll" />
+    <Content Include="bin\Debug\Windows Extensions\DotSpatial.Data.Rasters.GdalExtension\gdal\x64\plugins\gdal_HDF5Image.dll" />
+    <Content Include="bin\Debug\Windows Extensions\DotSpatial.Data.Rasters.GdalExtension\gdal\x64\plugins\gdal_MrSID.dll" />
+    <Content Include="bin\Debug\Windows Extensions\DotSpatial.Data.Rasters.GdalExtension\gdal\x64\plugins\gdal_netCDF.dll" />
+    <Content Include="bin\Debug\Windows Extensions\DotSpatial.Data.Rasters.GdalExtension\gdal\x64\plugins\hdf5dll.dll" />
+    <Content Include="bin\Debug\Windows Extensions\DotSpatial.Data.Rasters.GdalExtension\gdal\x64\plugins\libecwj2.dll" />
+    <Content Include="bin\Debug\Windows Extensions\DotSpatial.Data.Rasters.GdalExtension\gdal\x64\plugins\lti_dsdk.dll" />
+    <Content Include="bin\Debug\Windows Extensions\DotSpatial.Data.Rasters.GdalExtension\gdal\x64\plugins\netcdf.dll" />
+    <Content Include="bin\Debug\Windows Extensions\DotSpatial.Data.Rasters.GdalExtension\gdal\x64\proj.dll" />
+    <Content Include="bin\Debug\Windows Extensions\DotSpatial.Data.Rasters.GdalExtension\gdal\x64\spatialite.dll" />
+    <Content Include="bin\Debug\Windows Extensions\DotSpatial.Data.Rasters.GdalExtension\gdal\x64\ssleay32.dll" />
+    <Content Include="bin\Debug\Windows Extensions\DotSpatial.Data.Rasters.GdalExtension\gdal\x64\xerces-c_2_8.dll" />
+    <Content Include="bin\Debug\Windows Extensions\DotSpatial.Data.Rasters.GdalExtension\gdal\x64\zlib1.dll" />
+    <Content Include="bin\Debug\Windows Extensions\DotSpatial.Data.Rasters.GdalExtension\gdal\x86\freexl.dll" />
+    <Content Include="bin\Debug\Windows Extensions\DotSpatial.Data.Rasters.GdalExtension\gdal\x86\gdal19.dll" />
+    <Content Include="bin\Debug\Windows Extensions\DotSpatial.Data.Rasters.GdalExtension\gdal\x86\gdalconst_wrap.dll" />
+    <Content Include="bin\Debug\Windows Extensions\DotSpatial.Data.Rasters.GdalExtension\gdal\x86\gdal_wrap.dll" />
+    <Content Include="bin\Debug\Windows Extensions\DotSpatial.Data.Rasters.GdalExtension\gdal\x86\geos_c.dll" />
+    <Content Include="bin\Debug\Windows Extensions\DotSpatial.Data.Rasters.GdalExtension\gdal\x86\iconv.dll" />
+    <Content Include="bin\Debug\Windows Extensions\DotSpatial.Data.Rasters.GdalExtension\gdal\x86\libcurl.dll" />
+    <Content Include="bin\Debug\Windows Extensions\DotSpatial.Data.Rasters.GdalExtension\gdal\x86\libeay32.dll" />
+    <Content Include="bin\Debug\Windows Extensions\DotSpatial.Data.Rasters.GdalExtension\gdal\x86\libexpat.dll" />
+    <Content Include="bin\Debug\Windows Extensions\DotSpatial.Data.Rasters.GdalExtension\gdal\x86\libmysql.dll" />
+    <Content Include="bin\Debug\Windows Extensions\DotSpatial.Data.Rasters.GdalExtension\gdal\x86\libpq.dll" />
+    <Content Include="bin\Debug\Windows Extensions\DotSpatial.Data.Rasters.GdalExtension\gdal\x86\msvcp100.dll" />
+    <Content Include="bin\Debug\Windows Extensions\DotSpatial.Data.Rasters.GdalExtension\gdal\x86\msvcr100.dll" />
+    <Content Include="bin\Debug\Windows Extensions\DotSpatial.Data.Rasters.GdalExtension\gdal\x86\ogr_wrap.dll" />
+    <Content Include="bin\Debug\Windows Extensions\DotSpatial.Data.Rasters.GdalExtension\gdal\x86\openjpeg.dll" />
+    <Content Include="bin\Debug\Windows Extensions\DotSpatial.Data.Rasters.GdalExtension\gdal\x86\osr_wrap.dll" />
+    <Content Include="bin\Debug\Windows Extensions\DotSpatial.Data.Rasters.GdalExtension\gdal\x86\plugins\cfitsio.dll" />
+    <Content Include="bin\Debug\Windows Extensions\DotSpatial.Data.Rasters.GdalExtension\gdal\x86\plugins\gdal_BAG.dll" />
+    <Content Include="bin\Debug\Windows Extensions\DotSpatial.Data.Rasters.GdalExtension\gdal\x86\plugins\gdal_ECW_JP2ECW.dll" />
+    <Content Include="bin\Debug\Windows Extensions\DotSpatial.Data.Rasters.GdalExtension\gdal\x86\plugins\gdal_FITS.dll" />
+    <Content Include="bin\Debug\Windows Extensions\DotSpatial.Data.Rasters.GdalExtension\gdal\x86\plugins\gdal_GMT.dll" />
+    <Content Include="bin\Debug\Windows Extensions\DotSpatial.Data.Rasters.GdalExtension\gdal\x86\plugins\gdal_HDF5.dll" />
+    <Content Include="bin\Debug\Windows Extensions\DotSpatial.Data.Rasters.GdalExtension\gdal\x86\plugins\gdal_HDF5Image.dll" />
+    <Content Include="bin\Debug\Windows Extensions\DotSpatial.Data.Rasters.GdalExtension\gdal\x86\plugins\gdal_MrSID.dll" />
+    <Content Include="bin\Debug\Windows Extensions\DotSpatial.Data.Rasters.GdalExtension\gdal\x86\plugins\gdal_netCDF.dll" />
+    <Content Include="bin\Debug\Windows Extensions\DotSpatial.Data.Rasters.GdalExtension\gdal\x86\plugins\hdf5dll.dll" />
+    <Content Include="bin\Debug\Windows Extensions\DotSpatial.Data.Rasters.GdalExtension\gdal\x86\plugins\libecwj2.dll" />
+    <Content Include="bin\Debug\Windows Extensions\DotSpatial.Data.Rasters.GdalExtension\gdal\x86\plugins\lti_dsdk.dll" />
+    <Content Include="bin\Debug\Windows Extensions\DotSpatial.Data.Rasters.GdalExtension\gdal\x86\plugins\netcdf.dll" />
+    <Content Include="bin\Debug\Windows Extensions\DotSpatial.Data.Rasters.GdalExtension\gdal\x86\proj.dll" />
+    <Content Include="bin\Debug\Windows Extensions\DotSpatial.Data.Rasters.GdalExtension\gdal\x86\spatialite.dll" />
+    <Content Include="bin\Debug\Windows Extensions\DotSpatial.Data.Rasters.GdalExtension\gdal\x86\ssleay32.dll" />
+    <Content Include="bin\Debug\Windows Extensions\DotSpatial.Data.Rasters.GdalExtension\gdal\x86\xerces-c_2_8.dll" />
+    <Content Include="bin\Debug\Windows Extensions\DotSpatial.Data.Rasters.GdalExtension\gdal\x86\zlib1.dll" />
+    <Content Include="bin\Debug\Windows Extensions\DotSpatial.Data.Rasters.GdalExtension\gdal_csharp.dll" />
+    <Content Include="bin\Debug\Windows Extensions\DotSpatial.Data.Rasters.GdalExtension\ogr_csharp.dll" />
+    <Content Include="bin\Debug\Windows Extensions\DotSpatial.Data.Rasters.GdalExtension\osr_csharp.dll" />
+    <Content Include="bin\Debug\Windows Extensions\DotSpatial.Data.Rasters.GdalExtension\Readme.txt" />
+    <Content Include="bin\Debug\Windows Extensions\DotSpatial.Plugins.ClickOnceUpdater\DotSpatial.Plugins.ClickOnceUpdater.dll" />
+    <Content Include="bin\Debug\Windows Extensions\DotSpatial.Plugins.ClickOnceUpdater\DotSpatial.Plugins.ClickOnceUpdater.pdb" />
+    <Content Include="bin\Debug\Windows Extensions\DotSpatial.Plugins.ClickOnceUpdater\Readme.txt" />
+    <Content Include="bin\Debug\Windows Extensions\DotSpatial.Plugins.MapWindowProjectFileCompatibility\DotSpatial.Plugins.MapWindowProjectFileCompatibility.dll" />
+    <Content Include="bin\Debug\Windows Extensions\DotSpatial.Plugins.MapWindowProjectFileCompatibility\DotSpatial.Plugins.MapWindowProjectFileCompatibility.pdb" />
+    <Content Include="bin\Debug\Windows Extensions\DotSpatial.Plugins.MapWindowProjectFileCompatibility\Ionic.Zip.dll" />
+    <Content Include="bin\Debug\Windows Extensions\DotSpatial.Plugins.MapWindowProjectFileCompatibility\Ionic.Zip.xml" />
+    <Content Include="bin\Debug\Windows Extensions\DotSpatial.Plugins.MapWindowProjectFileCompatibility\Readme.txt" />
+    <Content Include="bin\Debug\Windows Extensions\DotSpatial.Plugins.ScriptRunner\cs\DotSpatial.Plugins.ScriptRunner.resources.dll" />
+    <Content Include="bin\Debug\Windows Extensions\DotSpatial.Plugins.ScriptRunner\de\DotSpatial.Plugins.ScriptRunner.resources.dll" />
+    <Content Include="bin\Debug\Windows Extensions\DotSpatial.Plugins.ScriptRunner\DotSpatial.Plugins.ScriptRunner.CSharpCodeCompletion.dll" />
+    <Content Include="bin\Debug\Windows Extensions\DotSpatial.Plugins.ScriptRunner\DotSpatial.Plugins.ScriptRunner.CSharpCodeCompletion.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="bin\Debug\Windows Extensions\DotSpatial.Plugins.ScriptRunner\DotSpatial.Plugins.ScriptRunner.dll" />
+    <Content Include="bin\Debug\Windows Extensions\DotSpatial.Plugins.ScriptRunner\DotSpatial.Plugins.ScriptRunner.pdb" />
+    <Content Include="bin\Debug\Windows Extensions\DotSpatial.Plugins.ScriptRunner\el\DotSpatial.Plugins.ScriptRunner.resources.dll" />
+    <Content Include="bin\Debug\Windows Extensions\DotSpatial.Plugins.ScriptRunner\ICSharpCode.NRefactory.dll" />
+    <Content Include="bin\Debug\Windows Extensions\DotSpatial.Plugins.ScriptRunner\ICSharpCode.SharpDevelop.Dom.dll" />
+    <Content Include="bin\Debug\Windows Extensions\DotSpatial.Plugins.ScriptRunner\ICSharpCode.TextEditor.dll" />
+    <Content Include="bin\Debug\Windows Extensions\DotSpatial.Plugins.ScriptRunner\ja-JP\DotSpatial.Plugins.ScriptRunner.resources.dll" />
+    <Content Include="bin\Debug\Windows Extensions\DotSpatial.Plugins.ScriptRunner\lt\DotSpatial.Plugins.ScriptRunner.resources.dll" />
+    <Content Include="bin\Debug\Windows Extensions\DotSpatial.Plugins.ScriptRunner\MapWinUtility.dll" />
+    <Content Include="bin\Debug\Windows Extensions\DotSpatial.Plugins.ScriptRunner\MapWinUtility.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="bin\Debug\Windows Extensions\DotSpatial.Plugins.ScriptRunner\Mono.Cecil.dll" />
+    <Content Include="bin\Debug\Windows Extensions\DotSpatial.Plugins.ScriptRunner\nl\DotSpatial.Plugins.ScriptRunner.resources.dll" />
+    <Content Include="bin\Debug\Windows Extensions\DotSpatial.Plugins.ScriptRunner\Readme.txt" />
+    <Content Include="bin\Debug\Windows Extensions\DotSpatial.Plugins.ScriptRunner\ro\DotSpatial.Plugins.ScriptRunner.resources.dll" />
+    <Content Include="bin\Debug\Windows Extensions\DotSpatial.Plugins.ScriptRunner\th\DotSpatial.Plugins.ScriptRunner.resources.dll" />
+    <Content Include="bin\Debug\Windows Extensions\DotSpatial.Plugins.ScriptRunner\vi-VN\DotSpatial.Plugins.ScriptRunner.resources.dll" />
+    <Content Include="bin\Debug\Windows Extensions\DotSpatial.Plugins.Taudem.Port\DotSpatial.Plugins.Taudem.dll" />
+    <Content Include="bin\Debug\Windows Extensions\DotSpatial.Plugins.Taudem.Port\DotSpatial.Plugins.Taudem.pdb" />
+    <Content Include="bin\Debug\Windows Extensions\DotSpatial.Plugins.Taudem.Port\DotSpatial.Plugins.Taudem.Port.dll" />
+    <Content Include="bin\Debug\Windows Extensions\DotSpatial.Plugins.Taudem.Port\DotSpatial.Plugins.Taudem.Port.pdb" />
+    <Content Include="bin\Debug\Windows Extensions\DotSpatial.Plugins.Taudem.Port\Readme.txt" />
+    <Content Include="bin\Debug\Windows Extensions\DotSpatial.Plugins.WebMap\BruTile.Desktop.dll" />
+    <Content Include="bin\Debug\Windows Extensions\DotSpatial.Plugins.WebMap\BruTile.Desktop.pdb" />
+    <Content Include="bin\Debug\Windows Extensions\DotSpatial.Plugins.WebMap\BruTile.dll" />
+    <Content Include="bin\Debug\Windows Extensions\DotSpatial.Plugins.WebMap\BruTile.pdb" />
+    <Content Include="bin\Debug\Windows Extensions\DotSpatial.Plugins.WebMap\DotSpatial.Plugins.WebMap.dll" />
+    <Content Include="bin\Debug\Windows Extensions\DotSpatial.Plugins.WebMap\DotSpatial.Plugins.WebMap.pdb" />
+    <Content Include="bin\Debug\Windows Extensions\DotSpatial.Plugins.WebMap\Readme.txt" />
+    <Content Include="bin\Debug\Windows Extensions\DotSpatial.Plugins.WFSClient\DotSpatial.Plugins.WFSClient.dll" />
+    <Content Include="bin\Debug\Windows Extensions\DotSpatial.Plugins.WFSClient\DotSpatial.Plugins.WFSClient.pdb" />
+    <Content Include="bin\Debug\Windows Extensions\DotSpatial.Plugins.WFSClient\Readme.txt" />
+    <Content Include="bin\Debug\Windows Extensions\DotSpatial.Plugins.WFSClient\Renci.Data.Interop.dll" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
