@@ -198,6 +198,7 @@
 
         #endregion DrawingALine
 
+        #region MakingAProfile
         private void viewSoilProfileToolStripMenuItem_Click(object sender, EventArgs e)
         {
             int x;
@@ -316,6 +317,7 @@
 
             return pathPointList;
         }
+        #endregion
 
         public void SaveAndCreateShp(FeatureSet lineShape)
         {

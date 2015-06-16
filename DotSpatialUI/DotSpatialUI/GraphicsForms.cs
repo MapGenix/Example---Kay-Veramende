@@ -38,18 +38,25 @@
                 for (int y = 0; y <= pathList.Count - 1; y++)
                 {
                     distanceArray[y] = pathList[y].Distance;
-                    distanceArray[y] = pathList[y].Elevation;
+                    elevationArray[y] = pathList[y].Elevation;
 
                 }
 
-                ZedGraph.LineItem myCurve = uxZedGraphControl.GraphPane.AddCurve(sss[x], distanceArray, elevationArray, Color.Tomato);
+                Random rColor = new Random();
+
+                int r = rColor.Next(0, 250);
+                int g = rColor.Next(0, 250);
+                int b = rColor.Next(0, 250);
+                    
+
+                ZedGraph.LineItem myCurve = uxZedGraphControl.GraphPane.AddCurve(sss[x].ToUpper(), distanceArray, elevationArray, Color.FromArgb(r,g,b));
                 myCurve.Line.Width = 1f;
                 myCurve.Symbol.Type = ZedGraph.SymbolType.HDash;
             }
 
-            uxZedGraphControl.GraphPane.Title = "Soil Profile";
-            uxZedGraphControl.GraphPane.XAxis.Title = "Distance (Meters)";
-            uxZedGraphControl.GraphPane.Y2Axis.Title = "Depth (Meters)";
+            uxZedGraphControl.GraphPane.Title.Text = "Profile";
+            uxZedGraphControl.GraphPane.XAxis.Title.Text = "Distance (Meters)";
+            uxZedGraphControl.GraphPane.Y2Axis.Title.Text = "Depth (Meters)";
 
             uxZedGraphControl.AxisChange();
         
